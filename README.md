@@ -1,17 +1,17 @@
-# 🛡️ TELKOM-NETGUARD
+<div align="center">
+  <img src="./assets/logo.png" alt="TELKOM-NETGUARD Logo" width="480" />
 
-**AI-Powered Network Intelligence Dashboard** — Real-time network monitoring, anomaly detection, and predictive analytics integrated with live data from RIPE Atlas.
+**AI-Powered Network Intelligence Dashboard**
+
+Real-time network monitoring, anomaly detection, and predictive analytics
+integrated with live data from RIPE Atlas.
 
 [![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://nuxt.com/)
 [![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Pinia](https://img.shields.io/badge/Pinia-FFE64E?style=for-the-badge&logo=pinia&logoColor=black)](https://pinia.vuejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
----
-
-![Dashboard Overview](https://via.placeholder.com/1200x600/0f172a/38bdf8?text=TELKOM-NETGUARD+Dashboard+Overview)
+</div>
 
 ---
 
@@ -116,32 +116,36 @@
 │           └──────────────────────┘                         │
 └─────────────────────────────────────────────────────────────┘
 ```
-## 📸 Screenshots
+
+## 📸 Dokumentasi
 
 ### 📊 Dashboard Overview
+
 ![Dashboard Overview](./screenshots/overview.png)
-*Network Health Score: 77.9/100 (Warning) | Real-time metrics: Latency 50.2ms, Packet Loss 0.51%, Jitter 9.5ms | 48-hour traffic chart with smooth curves | Badge shows "DEGRADED (Fallback)" when RIPE Atlas is unavailable*
+_Network Health Score: 77.9/100 (Warning) | Real-time metrics: Latency 50.2ms, Packet Loss 0.51%, Jitter 9.5ms | 48-hour traffic chart with smooth curves | Badge shows "DEGRADED (Fallback)" when RIPE Atlas is unavailable_
 
 ### ️ Network Map
+
 ![Network Map](./screenshots/network-map.png)
-*100 devices across 15 Indonesian cities | Color-coded by risk level*
+_100 devices across 15 Indonesian cities | Color-coded by risk level_
 
 ### 🚨 Incident Management
-![Incident Management](./screenshots/incidents.png)
-*25 incidents with full FK integrity | Status & severity tracking*
+
+![Incident Management](./screenshots/incident.png)
+_25 incidents with full FK integrity | Status & severity tracking_
 
 ### ⚠️ Anomaly Center
-![Anomaly Center](./screenshots/anomalies.png)
-*50 anomalies with varied deviations | Expected vs Actual values*
 
+![Anomaly Center](./screenshots/anomalies.png)
+_50 anomalies with varied deviations | Expected vs Actual values_
 
 ## 📊 Data Source States
 
-| State | Badge | Description |
-|-------|-------|-------------|
-| **HYBRID LIVE** | 🟢 Green | Successfully fetching real data from RIPE Atlas. |
-| **DEGRADED** | 🔴 Red | RIPE Atlas failed/timed out. Using cached mock fallback transparently. |
-| **DEMO DATA** | 🟡 Yellow | Running in full mock mode (Development/Offline). |
+| State           | Badge     | Description                                                            |
+| --------------- | --------- | ---------------------------------------------------------------------- |
+| **HYBRID LIVE** | 🟢 Green  | Successfully fetching real data from RIPE Atlas.                       |
+| **DEGRADED**    | 🔴 Red    | RIPE Atlas failed/timed out. Using cached mock fallback transparently. |
+| **DEMO DATA**   | 🟡 Yellow | Running in full mock mode (Development/Offline).                       |
 
 ---
 
@@ -149,9 +153,21 @@
 
 ### Environment Variables
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `NUXT_PUBLIC_USE_MOCK` | `true` | Toggle between mock and hybrid mode. |
-| `NUXT_PUBLIC_RIPE_BASE` | `https://atlas.ripe.net/api/v2` | RIPE Atlas API endpoint. |
-| `NUXT_PUBLIC_POLL_INTERVAL` | `300000` | Refresh interval in milliseconds (5 min). |
-| `NUXT_PUBLIC_RIPE_API_KEY` | `""` | Optional API key for higher rate limits. |
+| Variable                    | Default                         | Description                               |
+| --------------------------- | ------------------------------- | ----------------------------------------- |
+| `NUXT_PUBLIC_USE_MOCK`      | `true`                          | Toggle between mock and hybrid mode.      |
+| `NUXT_PUBLIC_RIPE_BASE`     | `https://atlas.ripe.net/api/v2` | RIPE Atlas API endpoint.                  |
+| `NUXT_PUBLIC_POLL_INTERVAL` | `300000`                        | Refresh interval in milliseconds (5 min). |
+| `NUXT_PUBLIC_RIPE_API_KEY`  | `""`                            | Optional API key for higher rate limits.  |
+
+---
+
+## 🔌 API Integration
+RIPE Atlas Integration
+The dashboard integrates with RIPE Atlas, a global network measurement platform, through a server-side proxy to ensure stability and bypass CORS.
+
+## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Built with ❤️ using Nuxt 3, Vue 3, and TypeScript
+⬆ Back to Top

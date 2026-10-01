@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-bg text-text-primary font-sans antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a1628;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1d3047;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a4260;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card border border-border rounded-xl transition-colors duration-200;
+  }
+  .card-hover {
+    @apply hover:bg-card-hover hover:border-[#2A4260] cursor-pointer;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium
+      transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-soft text-white;
+  }
+  .btn-ghost {
+    @apply text-text-secondary hover:text-text-primary hover:bg-card-hover;
+  }
+  .btn-outline {
+    @apply border border-border text-text-secondary hover:border-[#2A4260] hover:text-text-primary;
+  }
+  .input {
+    @apply w-full bg-sidebar border border-border rounded-lg px-3 py-2 text-sm text-text-primary
+      placeholder:text-text-secondary/60 focus:outline-none focus:border-primary/60 transition-colors;
+  }
+}
+
+/* Leaflet dark theme */
+.leaflet-container {
+  background: #07111f !important;
+  font-family: "Inter", sans-serif;
+}
+.leaflet-tile {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9);
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #0e1b2e;
+  color: #f8fafc;
+  border: 1px solid #1d3047;
+}
+
+/* Pulse animation for critical status */
+@keyframes pulse-critical {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+}
+.pulse-critical {
+  animation: pulse-critical 2s infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 250ms ease-out;
+}
